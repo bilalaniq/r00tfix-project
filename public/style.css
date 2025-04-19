@@ -394,4 +394,20 @@ body.light-mode .model-gradient {
         display: none; /* Hide the gradient in light mode */
 }
 
+#dotsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interference with other elements */
+    z-index: -1;
+    overflow: visible; /* Allow overflow for canvas */
+}
+
+/* Ensure the banner section does not restrict overflow */
+.banner {
+    position: relative;
+    overflow: visible; /* Allow overflow for child elements */
+}
 
