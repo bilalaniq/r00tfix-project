@@ -1,0 +1,397 @@
+@import url('https://fonts.cdnfonts.com/css/devil-breeze');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/bimbo');
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #1B1B1B;
+    color: #eef8ce;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-image:
+    url(img/bg.png),
+    repeating-linear-gradient(
+        to right, transparent 0 500px, #73814B33 500px 501px
+    );
+    background-size: 100%;
+}
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Style for all <p> elements */
+p {
+  font-size: 1.5em; /* Increase the font size */
+  line-height: 1.8; /* Adjust line height for better readability */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-fit {
+    width: min(1200px, 90vw);
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    padding-block: 10em;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200; /* Ensure the header is above the model */
+    backdrop-filter: blur(20px);
+    background-color: #1B1B1B11;
+    background-image: repeating-linear-gradient(
+        to right, transparent 0 500px, #eee1 500px 501px
+    );
+    padding: 1em 2em; /* Add padding to increase header size */
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+header .content-fit {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    gap: 2em; /* Add spacing between the logo and nav */
+    min-height: unset !important;
+    padding-block: unset !important;
+}
+header .content-fit nav ul {
+    display: flex;
+    gap: 2em;
+}
+
+header .light-mode-btn {
+    margin-left: auto; /* Push the button to the rightmost side */
+    background: #445022;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#banner .title {
+    color: #d1ff48;
+    font-size: 11em;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    text-align: left;
+}
+#banner .title::before {
+    content: attr(data-before);
+    position: absolute;
+    top: 0.5em;
+    inset: 0.66em 0 0 0;
+    z-index: -1;
+    color: #445022;
+}
+.section .decorate {
+    position: absolute;
+}
+#intro .content-fit {
+    display: flex;
+    gap: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+.section .number {
+    font-family: "devil breeze";
+    font-size: 15em;
+    font-weight: bold;
+}
+.section .content-fit .title {
+    font-family: "devil breeze";
+    font-size: 5em;
+    font-weight: bold;
+}
+#description .content-fit {
+    padding-right: 30%;
+}
+#description .number {
+    font-size: 5em;
+}
+#description .title {
+    font-size: 7em;
+    font-weight: 500;
+}
+#contact .content-fit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#contact table {
+    width: min(800px, 90vw);
+    padding-top: 2em;
+    font-size: 2em;
+    margin: auto;
+}
+#contact table td {
+    padding-block: 0.5em;
+    border-bottom: 1px dashed #445022;
+}
+#contact table td:nth-child(1) {
+    text-align: left;
+    font-weight: 500;
+}
+#contact table td:nth-child(2) {
+    text-align: right;
+    font-weight: 200;
+}
+#contact .sign {
+    font-family: 'Bimbo', sans-serif;
+    font-size: 10em;
+}
+
+
+
+.flower {
+    width: 20vw; /* Adjust size as needed */
+    bottom: 0;
+    right: 0; /* Align to the rightmost edge */
+}
+
+.leaf {
+    width: 20vw; /* Adjust size as needed */
+    bottom: 0;
+    left: 0; /* Align to the leftmost edge */
+}
+
+/* Adjust the flower decoration */
+.decorate.flower {
+    position: absolute;
+    bottom: 0; /* Align to the bottom */
+    right: 0; /* Align to the rightmost edge */
+    transform: none; /* Remove vertical centering */
+    z-index: 100;
+    width: 20vw; /* Match the size of the leaf */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.model-gradient {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 38vw; /* Match the width of the model */
+    height: 15vh; /* Height of the gradient */
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)); /* Transparent gradient */
+    z-index: 99; /* Place it below the model */
+}
+
+/* Model styling */
+.model {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: 0; /* Align to the right */
+    transform: translateY(-50%);
+    z-index: 100; /* Place the model behind the header */
+    width: 38vw; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.headphone-container {
+    position: relative;
+    width: 300%;
+    height: 400px;
+    left: 0%;
+    overflow: visible;
+    margin-left: -10%;
+  }
+  
+  .headphone {
+    position: absolute;
+    top: 0;
+    left: 30%; /* <-- Shift to the right (increase this if you want it further right) */
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s ease-in-out;
+    height: 130%;
+    width: auto;
+  }
+  
+  .headphone.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .headphone.hide {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  .headphone.show:hover {
+    transform: scale(1.05) translateY(-10px);
+  }
+  
+  .headphone:hover {
+    transform: none;
+  }
+  
+  #headphone::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: skewX(-30deg);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  #headphone:hover::before {
+    opacity: 1;
+    transform: skewX(-30deg) translateX(100%);
+  }
+  
+
+@media screen and (max-width: 1023px){
+    #banner .title {
+        font-size: 5em;
+    }
+    #intro .content-fit {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 767px){
+    #banner .title {
+        font-size: 3em;
+    }
+    #intro .content-fit {
+        flex-direction: column;
+    }
+    .section .number {
+        font-size: 5em;
+    }
+    .section .content-fit .title {
+        font-size: 2em;
+    }
+    #description .content-fit {
+        padding-right: 0;
+    }
+    #contact table {
+        font-size: 1em;
+    }
+    #contact .sign {
+        font-size: 2em;
+    }
+    #container3D {
+        position: absolute;
+    }
+
+    /* Hide the model on smaller screens */
+    .model {
+        display: none;
+    }
+
+    /* Hide the model gradient */
+    .model-gradient {
+        display: none;
+    }
+
+    /* Hide all headphones */
+    .headphone {
+        display: none;
+    }
+}
+
+
+#toggle-light-mode {
+    position: fixed;
+    top: 0.5em; /* Add a small distance from the top */
+    right: 1em;
+    background: #445022;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+}
+#toggle-light-mode:hover {
+    background: #73814B;
+}
+
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #D2D2D2; /* Light gray background */
+    background-image:
+        repeating-linear-gradient(
+            to right, transparent 0 100px,
+            #25283b22 100px 101px
+        ),
+        repeating-linear-gradient(
+            to bottom, transparent 0 100px,
+            #25283b22 100px 101px
+        ); /* Grid-like pattern */
+    color: #1B1B1B; /* Dark text color */
+}
+
+body.light-mode header {
+    background-color: #f5f5f5; /* Light header background */
+    backdrop-filter: none; /* Remove blur effect */
+    color: #1B1B1B; /* Dark text color */
+}
+
+body.light-mode .logo {
+    color: #1B1B1B; /* Dark logo color */
+}
+
+body.light-mode #banner .title {
+    color: #445022; /* Darker green for light mode */
+}
+
+body.light-mode #banner .title::before {
+    color: #73814B; /* Adjust the shadow text color */
+}
+
+body.light-mode .section .number {
+    color: #73814B; /* Adjust the number color */
+}
+
+body.light-mode .section .content-fit .title {
+    color: #1B1B1B; /* Darker title color */
+}
+
+body.light-mode #contact table td {
+    border-bottom: 1px dashed #73814B; /* Adjust table border color */
+}
+
+body.light-mode #contact .sign {
+    color: #445022; /* Adjust signature color */
+}
+
+body.light-mode .flower,
+body.light-mode .leaf {
+    filter: brightness(0.8); /* Slightly dim decorations */
+}
+
+body.light-mode .model-gradient {
+        display: none; /* Hide the gradient in light mode */
+}
+
+
